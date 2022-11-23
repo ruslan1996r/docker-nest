@@ -1,0 +1,15 @@
+FROM node:18-alpine as appbuild
+WORKDIR /usr/src/app
+COPY package.json yarn.lock ./
+COPY tsconfig.json tsconfig.build.json ./
+RUN yarn install
+COPY src ./src
+RUN yarn run build
+
+FROM node:18-alpine as production
+WORKDIR /usr/src/app
+COPY package.json yarn.lock ./
+RUN yarn --production
+COPY --from=appbuild /usr/src/app/dist ./
+EXPOSE 4000
+CMD yarn run start:prod
