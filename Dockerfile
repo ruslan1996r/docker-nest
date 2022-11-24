@@ -5,7 +5,7 @@ FROM node:8-alpine
 WORKDIR /usr/src/api
 
 # COPY dist .
-ADD dist/ .
+COPY dist/ .
 
 # The community seems to have concluded that it is generally not recommended to bundle
 # and tree-shake complex NodeJS server apps.  Dependencies should be installed
