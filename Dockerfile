@@ -1,10 +1,8 @@
 # goregrish/ruslan1996r-cart-api
-
 FROM node:8-alpine
 
 WORKDIR /usr/src/api
 
-# COPY dist .
 COPY dist/ .
 
 # The community seems to have concluded that it is generally not recommended to bundle
