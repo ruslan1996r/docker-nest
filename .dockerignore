@@ -1,3 +1,5 @@
+# These files will not be needed to build the docker image, and the actual node_modules will be installed during the multi-stage build. 
+# This increases efficiency by reducing the amount of redundant data passed to the Docker daemon.
 *.md
 README.md
 .prettierrc
