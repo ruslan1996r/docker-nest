@@ -1,5 +1,7 @@
 // https://github.com/ZenSoftware/bundled-nest - ссылка на оригинал
 // ! Ввести в консоль перед билдом "export NODE_OPTIONS=--openssl-legacy-provider"
+// ! Билд с вебпаком не работает, нужно использовать команду "nest build". 
+//* Проблема в ленивой загрузке некоторых модулей, которые вебпак пытается загрузить сразу
 
 const path = require('path');
 const webpack = require('webpack');

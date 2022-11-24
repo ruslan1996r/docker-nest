@@ -4,7 +4,7 @@ import * as helmet from 'helmet';
 
 import { AppModule } from './app.module';
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 const msg = () => console.log(`App on: http://localhost:${port}/`);
 
 async function bootstrap() {

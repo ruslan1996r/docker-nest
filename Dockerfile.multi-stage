@@ -11,5 +11,5 @@ WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn --production
 COPY --from=appbuild /usr/src/app/dist ./
-EXPOSE 4000
+EXPOSE 3000
 CMD yarn run start:prod

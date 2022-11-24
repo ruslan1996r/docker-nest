@@ -21,10 +21,10 @@
   "test:e2e": "jest --config ./test/jest-e2e.json",
   "build:tsc": "rimraf dist && tsc -p tsconfig.build.json",
   "build:prod": "rimraf dist && webpack",
-  "docker:build": "npm run build:prod && docker build -f ./Dockerfile -t nest-app .",
-  "docker:run": "docker run -p 3001:3000 -d nest-app",
+  "docker:build": "npm run build && docker build -f ./Dockerfile -t nest-app .",
+  "docker:run": "docker run -p 3000:3000 -d nest-app",
   "docker:ms": "docker build -f ./Dockerfile.multi-stage -t nest-ms .",
-  "docker:ms:run": "docker run -p 3001:3000 -d nest-ms"
+  "docker:ms:run": "docker run -p 3000:3000 -d nest-ms"
  },
  "dependencies": {
   "@nestjs/common": "^7.5.1",
